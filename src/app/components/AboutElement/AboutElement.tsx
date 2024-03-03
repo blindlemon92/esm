@@ -1,5 +1,5 @@
-import erinVintageFrame from '/Users/jessiebaker/Documents/ erin_stoll_ music/site/frontEnd/erin_stoll_music/public/aboutFrame.png';
-import gradientAbout from '/Users/jessiebaker/Documents/ erin_stoll_ music/site/frontEnd/erin_stoll_music/public/gradientAbout.png';
+import erinVintageFrame from '/Users/jessiebaker/Documents/erin_stoll_music/site/frontEnd/erin_stoll_music/public/aboutFrame.png';
+import gradientAbout from '/Users/jessiebaker/Documents/erin_stoll_music/site/frontEnd/erin_stoll_music/public/gradientAbout.png';
 
 import { Libre_Baskerville } from 'next/font/google';
 import Image from 'next/image';

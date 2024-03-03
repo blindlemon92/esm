@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from './OnTour.module.css';
-import headerImg from '/Users/jessiebaker/Documents/ erin_stoll_ music/site/frontEnd/erin_stoll_music/public/tourHeader.png';
-import fullSizeBg from '/Users/jessiebaker/Documents/ erin_stoll_ music/site/frontEnd/erin_stoll_music/public/tourBG.jpg';
+import headerImg from '/Users/jessiebaker/Documents/erin_stoll_music/site/frontEnd/erin_stoll_music/public/tourHeader.png';
+import fullSizeBg from '/Users/jessiebaker/Documents/erin_stoll_music/site/frontEnd/erin_stoll_music/public/tourBG.jpg';
 import { Prata } from 'next/font/google';
 
 const prata = Prata({ weight: '400', subsets: ['latin'] });

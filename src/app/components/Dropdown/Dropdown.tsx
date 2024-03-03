@@ -1,9 +1,9 @@
-import aboutIcon from '/Users/jessiebaker/Documents/ erin_stoll_ music/site/frontEnd/erin_stoll_music/public/About.png';
-import closeDropdown from '/Users/jessiebaker/Documents/ erin_stoll_ music/site/frontEnd/erin_stoll_music/public/closePopUp.png';
-import contactIcon from '/Users/jessiebaker/Documents/ erin_stoll_ music/site/frontEnd/erin_stoll_music/public/Contact.png';
-import mediaIcon from '/Users/jessiebaker/Documents/ erin_stoll_ music/site/frontEnd/erin_stoll_music/public/Media.png';
-import newsIcon from '/Users/jessiebaker/Documents/ erin_stoll_ music/site/frontEnd/erin_stoll_music/public/News.png';
-import tourIcon from '/Users/jessiebaker/Documents/ erin_stoll_ music/site/frontEnd/erin_stoll_music/public/Tour.png';
+import aboutIcon from '/Users/jessiebaker/Documents/erin_stoll_music/site/frontEnd/erin_stoll_music/public/About.png';
+import closeDropdown from '/Users/jessiebaker/Documents/erin_stoll_music/site/frontEnd/erin_stoll_music/public/closePopUp.png';
+import contactIcon from '/Users/jessiebaker/Documents/erin_stoll_music/site/frontEnd/erin_stoll_music/public/Contact.png';
+import mediaIcon from '/Users/jessiebaker/Documents/erin_stoll_music/site/frontEnd/erin_stoll_music/public/Media.png';
+import newsIcon from '/Users/jessiebaker/Documents/erin_stoll_music/site/frontEnd/erin_stoll_music/public/News.png';
+import tourIcon from '/Users/jessiebaker/Documents/erin_stoll_music/site/frontEnd/erin_stoll_music/public/Tour.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
