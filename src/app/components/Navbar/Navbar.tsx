@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
-import AmazonLogo from '../svgs/ AmazonLogo/AmazonLogo';
+import AmazonLogo from '../svgs/AmazonLogo/AmazonLogo';
 
 import TikTokLogo from '../svgs/TikTokLogo/TikTokLogo';
 import AppleMusic from '../svgs/AppleMusic/AppleMusic';
