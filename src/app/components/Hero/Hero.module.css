@@ -1,0 +1,34 @@
+.heroImg {
+	@apply hidden sm:block;
+}
+
+.mobileHeroImg {
+	@apply block sm:hidden min-w-[390px];
+}
+
+.heroAdd {
+	visibility: hidden;
+	opacity: 0;
+	animation: fadeInSlow 3s ease forwards;
+	animation-delay: 0.5s;
+	@apply flex scale-[1.5] md:scale-[1] -translate-x-[15svw] md:translate-x-2 lg:-translate-x-[7.5svw] xl:translate-y-[2svh];
+}
+
+@keyframes fadeInSlow {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.messageContainer {
+	@apply absolute flex flex-col place-items-center top-[40svh] whitespace-nowrap sm:top-[20svh] md:top-[25svh] left-1/3;
+}
+
+.outNow {
+	@apply p-3 mt-2 sm:mt-3 md:mt-6 bg-black font-bold text-xs tracking-widest;
+}

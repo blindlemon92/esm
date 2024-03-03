@@ -1,0 +1,55 @@
+.tourContainer {
+	@apply flex bg-[rgb(166,98,52)] h-auto;
+}
+
+.fullSizeBg {
+	@apply object-contain flex absolute bg-fixed z-0;
+}
+
+.headerContainer {
+	@apply z-30 bg-opacity-40 lg:py-10 md:w-[90svw] mr-[5svw] ml-[5svw];
+}
+
+.live {
+	@apply text-sm md:text-xl text-center p-3 md:pt-2;
+}
+
+.headerImgContainer {
+	@apply flex justify-center;
+}
+
+.headerImg {
+	@apply scale-[1.1] sm:scale-[1] md:px-[5svw] z-50;
+}
+
+.dateContainer {
+	@apply shadow-lg grid grid-cols-3 mt-5 bg-amber-800 px-2 rounded-2xl bg-opacity-40;
+}
+
+.leftDivContainer {
+	@apply shadow-lg flex justify-items-center whitespace-nowrap;
+}
+
+.leftDiv {
+	@apply drop-shadow-lg text-sm text-amber-400;
+}
+
+.centerDiv {
+	@apply text-center text-xs my-auto;
+}
+
+.rightDiv {
+	@apply flex justify-center items-center;
+}
+
+.notifyButton {
+	@apply text-center text-xs bg-black h-[2rem] w-[7rem] rounded-full shadow-sm;
+}
+
+.seeAllContainer {
+	@apply w-full flex justify-center;
+}
+
+.seeAllButton {
+	@apply text-black text-base  bg-white my-8 px-4 rounded-full;
+}

@@ -1,0 +1,31 @@
+.aboutElement {
+	@apply shadow-inner sm:grid sm:grid-cols-2 place-items-center justify-items-center bg-gradient-to-b from-[rgb(13,13,13)] to-[rgb(166,98,52)];
+}
+
+.headerContainer {
+	@apply flex flex-col place-items-center top-0 px-2 md:px-4 lg:px-6;
+}
+
+.bioSpan {
+	@apply drop-shadow-xl text-base px-2 mt-4;
+}
+
+.headerContainer > h3 {
+	@apply text-xl px-3 font-bold drop-shadow-lg;
+}
+
+.aboutHeader {
+	@apply w-auto;
+}
+
+.erinVintageFrameMobile {
+	@apply sm:hidden max-w-[400px];
+}
+
+.erinFullVintageFrame {
+	@apply hidden sm:block p-4;
+}
+
+.bioSpan {
+	@apply pb-6;
+}

@@ -1,0 +1,91 @@
+.dropdownSection {
+	animation: 400ms ease-in-out 0s 1 flyIn;
+	@apply z-10 h-[100svh] bg-[#9DD9D2] opacity-90;
+}
+
+@keyframes flyIn {
+	0% {
+		transform: translateY(200%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+.dropdownSection {
+	@apply relative -top-[4rem];
+}
+
+.closeIconButton {
+	@apply flex w-full justify-end;
+}
+
+.closeIcon {
+	@apply drop-shadow-xl m-2;
+}
+
+.socialsContainer {
+	animation: 0.5s ease-out 0s 1 slideinFromLeft;
+	@apply flex flex-col place-items-end gap-6 mr-[2rem] border-white;
+}
+
+@keyframes slideinFromLeft {
+	0% {
+		transform: translateX(-70%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+.aboutLink {
+	visibility: hidden;
+	opacity: 0;
+	animation: fadeInSlow 1s ease forwards;
+	animation-delay: 0.25s;
+}
+
+.aboutLink {
+	visibility: hidden;
+	opacity: 0;
+	animation: fadeInSlow 1s ease forwards;
+	animation-delay: 0.25s;
+}
+
+.newsLink {
+	visibility: hidden;
+	opacity: 0;
+	animation: fadeInSlow 1s ease forwards;
+	animation-delay: 0.3s;
+}
+
+.tourLink {
+	visibility: hidden;
+	opacity: 0;
+	animation: fadeInSlow 1s ease forwards;
+	animation-delay: 0.35s;
+}
+
+.mediaLink {
+	visibility: hidden;
+	opacity: 0;
+	animation: fadeInSlow 1s ease forwards;
+	animation-delay: 0.4s;
+}
+
+.contactLink {
+	visibility: hidden;
+	opacity: 0;
+	animation: fadeInSlow 1s ease forwards;
+	animation-delay: 0.45s;
+}
+
+@keyframes fadeInSlow {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}

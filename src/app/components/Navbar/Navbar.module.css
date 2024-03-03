@@ -1,0 +1,76 @@
+.navSection {
+	@apply bg-gradient-to-r 
+	from-[rgb(3,10,28)] from-20% via-[rgb(2,14,33)] via-30% to-[rgb(0,18,38)];
+}
+
+.contentContainer {
+	@apply z-50 fixed w-full overflow-clip top-0 mt-0 bg-inherit;
+}
+
+.erinLogoContainer {
+	@apply bg-opacity-40 px-2 py-1 rounded-xl md:translate-x-7 lg:translate-x-14  drop-shadow-lg mx-6;
+}
+
+.erinLogo {
+	animation: fadeInAnimation ease 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+
+	@apply flex w-[180px] md:w-[170px] lg:w-[250px] mt-2;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.logos {
+	@apply flex w-[90svw] justify-between md:justify-center items-center;
+}
+
+.socialLogos {
+	@apply flex absolute invisible md:visible right-0 mr-[3svw] bg-transparent gap-1.5 lg:gap-2;
+}
+.socialLogos > * {
+	animation: 1.5s ease-in-out 0s 1 dropInTop;
+	@apply w-[20px] h-[20px] transition ease-in-out delay-[25ms] hover:-translate-y-1 hover:scale-110 duration-300;
+}
+
+@keyframes dropInTop {
+	0% {
+		transform: translateY(-200%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+.burger {
+	@apply visible md:hidden;
+}
+
+.linksContainer > ul {
+	@apply hidden text-xs lg:text-[15px] md:flex w-[50svw] mx-auto justify-center items-center md:gap-[1rem] lg:gap-[3rem];
+}
+
+.localLink {
+	animation: 1.5s ease-out 0s 1 slideinFromLeft;
+	@apply transition-colors ease-in-out delay-[25ms] hover:cursor-pointer hover:text-amber-800 hover:opacity-95 duration-300;
+}
+
+@keyframes slideinFromLeft {
+	0% {
+		transform: translateX(-70%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+.dropdownContainer {
+	@apply relative z-50;
+}
