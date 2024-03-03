@@ -26,13 +26,13 @@ export default function AboutElement() {
 					alt='erin_in_vintage_frame'
 				/>
 				<p className={styles.bioSpan}>
-					'Since childhood, she\'s pursued her dream of Nashville stardom, known
+					Since childhood, shes pursued her dream of Nashville stardom, known
 					for her vibrant, crowd-pleasing performances. In 2016, she recorded
-					her debut EP \'Unfinished\' in Nashville, produced by Randy Barr,
-					which includes the Best Country Song of 2016 in Ohio, \'Unfinished\'.
-					Currently, she\'s collaborating with renowned producer Kenny Royster
-					for a new EP, expected in winter 2024, continuing her journey in the
-					country music scene.'
+					her debut EP Unfinished in Nashville, produced by Randy Barr, which
+					includes the Best Country Song of 2016 in Ohio, Unfinished. Currently,
+					shes collaborating with renowned producer Kenny Royster for a new EP,
+					expected in winter 2024, continuing her journey in the country music
+					scene.
 				</p>
 			</div>
 			<div className={styles.erinFullVintageFrame}>

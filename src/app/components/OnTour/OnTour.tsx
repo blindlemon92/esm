@@ -52,7 +52,7 @@ export default function OnTour() {
 					<div className={styles.leftDivContainer}>
 						<div className={styles.leftDiv}>
 							<h5>March. 15, 2024</h5>
-							<h3>Erin's Music Release Party</h3>
+							<h3>Erins Music Release Party</h3>
 						</div>
 					</div>
 					<div className={styles.centerDiv}>Wadsworth, OH</div>

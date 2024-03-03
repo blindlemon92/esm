@@ -29,7 +29,7 @@ export default function Navbar() {
 		setDropdownOpen((prevState) => !prevState);
 	};
 
-	const handleBurgerOrNothing = () => {
+	const handleBurgerOrNothing = async () => {
 		let value = <></>;
 		dropdownOpen ? null : (value = <BurgerLogo />);
 		setBurgerOrNothing(() => value);
