@@ -27,7 +27,7 @@ export default function OnTour() {
 				<div className={styles.dateContainer}>
 					<div className={styles.leftDivContainer}>
 						<div className={styles.leftDiv}>
-							<h5>March. 2, 2024</h5>
+							<h5>March 2, 2024</h5>
 							<h3>Sunny Slope Winery</h3>
 						</div>
 					</div>
@@ -76,7 +76,7 @@ export default function OnTour() {
 					<div className={styles.leftDivContainer}>
 						<div className={styles.leftDiv}>
 							<h5>March. 29, 2024</h5>
-							<h3>Loby's Grille</h3>
+							<h3>Lobys Grille</h3>
 						</div>
 					</div>
 					<div className={styles.centerDiv}>Canton, OH</div>
