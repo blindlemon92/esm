@@ -10,7 +10,9 @@ const config: Config = {
 		screens: {
 			sm: '640px',
 			// => @media (min-width: 640px) { ... }
-
+			mobileHeroSM: '450px',
+			inBetweenMobileHero: '500px',
+			inBetweenMobileHeroOne: '550px',
 			md: '768px',
 
 			lg: '1024px',

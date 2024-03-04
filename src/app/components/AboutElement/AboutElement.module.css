@@ -1,5 +1,5 @@
 .aboutElement {
-	@apply shadow-inner sm:grid sm:grid-cols-2 place-items-center justify-items-center bg-gradient-to-b from-[rgb(13,13,13)] to-[rgb(166,98,52)];
+	@apply shadow-inner text-white sm:grid sm:grid-cols-2 place-items-center justify-items-center bg-gradient-to-b from-[rgb(13,13,13)] to-[rgb(166,98,52)];
 }
 
 .headerContainer {
@@ -11,7 +11,7 @@
 }
 
 .headerContainer > h3 {
-	@apply text-xl px-3 font-bold drop-shadow-lg;
+	@apply text-xl  text-white px-3 font-bold drop-shadow-lg;
 }
 
 .aboutHeader {

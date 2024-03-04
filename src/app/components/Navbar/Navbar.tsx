@@ -24,6 +24,7 @@ const hammersmith = Hammersmith_One({ weight: '400', subsets: ['latin'] });
 export default function Navbar() {
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const [BurgerOrNothing, setBurgerOrNothing] = useState(<BurgerLogo />);
+	const [isScrolled, setIsScrolled] = useState(false);
 
 	const handleDropdown = () => {
 		setDropdownOpen((prevState) => !prevState);
@@ -39,10 +40,33 @@ export default function Navbar() {
 		handleBurgerOrNothing();
 	}, [dropdownOpen]);
 
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 50) {
+				setIsScrolled(() => true);
+			} else {
+				setIsScrolled(() => false);
+			}
+		};
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
+	useEffect(() => {
+		console.log(isScrolled);
+	}, [isScrolled]);
+
 	return (
 		<>
 			<section className={styles.navSection}>
-				<div className={styles.contentContainer}>
+				<div
+					className={`z-50 fixed w-full overflow-clip top-0 mt-0 ${
+						isScrolled
+							? 'bg-gradient-to-r from-[rgb(3,10,28)] from-20% via-[rgb(2,14,33)] via-30% to-[rgb(0,18,38)]'
+							: 'bg-inherit'
+					}`}>
 					<div className={styles.logos}>
 						<div className={styles.erinLogoContainer}>
 							<Image

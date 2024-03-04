@@ -1,17 +1,59 @@
-.heroImg {
-	@apply hidden sm:block;
+.fullSizeContainer {
+	@apply relative h-[85svh] hidden md:block;
 }
 
-.mobileHeroImg {
-	@apply block sm:hidden min-w-[390px];
+.heroImg {
+	@apply object-cover;
 }
 
 .heroAdd {
+	@apply absolute w-2/3 top-1/3 left-1/3 shadow-xl;
+}
+
+.inBetweenContainer {
+	@apply relative h-[80svh] inBetweenMobileHeroOne:h-[90svh] hidden inBetweenMobileHero:block md:hidden;
+}
+
+.inBetweenMobileHero {
+	@apply object-cover;
+}
+
+.inBetweenHeroAdd {
+	@apply absolute top-24 shadow-xl;
+}
+
+.mobileContainer {
+	@apply relative h-[80svh] mobileHeroSM:h-[90svh] inBetweenMobileHero:hidden;
+}
+
+.mobileHeroImg {
+	@apply object-cover;
+}
+
+.mobileHeroAdd {
+	@apply absolute w-[80%] top-1/4 shadow-xl;
+}
+
+/* .heroImg {
+	@apply hidden md:block;
+}
+
+.mobileHeroImgMd {
+	@apply hidden sm:block md:hidden;
+}
+
+.mobileHeroImg {
+	@apply flex sm:hidden h-auto;
+}
+
+.heroAdd {
+	@apply absolute flex;
+}
+
+.messageContainer {
 	visibility: hidden;
-	opacity: 0;
-	animation: fadeInSlow 3s ease forwards;
-	animation-delay: 0.5s;
-	@apply flex scale-[1.5] md:scale-[1] -translate-x-[15svw] md:translate-x-2 lg:-translate-x-[7.5svw] xl:translate-y-[2svh];
+	animation: fadeInSlow ease 3s 1s forwards;
+	@apply absolute flex flex-col place-items-center mt-[20svh] sm:mt-[9svh] w-3/4 md:mr-[10svw]  whitespace-nowrap md:hidden;
 }
 
 @keyframes fadeInSlow {
@@ -25,10 +67,6 @@
 	}
 }
 
-.messageContainer {
-	@apply absolute flex flex-col place-items-center top-[40svh] whitespace-nowrap sm:top-[20svh] md:top-[25svh] left-1/3;
-}
-
 .outNow {
 	@apply p-3 mt-2 sm:mt-3 md:mt-6 bg-black font-bold text-xs tracking-widest;
-}
+} */

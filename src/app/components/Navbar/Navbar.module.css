@@ -1,29 +1,20 @@
-.navSection {
-	@apply bg-gradient-to-r 
-	from-[rgb(3,10,28)] from-20% via-[rgb(2,14,33)] via-30% to-[rgb(0,18,38)];
-}
-
-.contentContainer {
-	@apply z-50 fixed w-full overflow-clip top-0 mt-0 bg-inherit;
-}
-
 .erinLogoContainer {
 	@apply bg-opacity-40 px-2 py-1 rounded-xl md:translate-x-7 lg:translate-x-14  drop-shadow-lg mx-6;
 }
 
 .erinLogo {
-	animation: fadeInAnimation ease 3s;
-	animation-iteration-count: 1;
-	animation-fill-mode: forwards;
-
+	visibility: hidden;
+	animation: fadeInAnimation ease 1.5s 0.75s 1 forwards;
 	@apply flex w-[180px] md:w-[170px] lg:w-[250px] mt-2;
 }
 
 @keyframes fadeInAnimation {
 	0% {
+		visibility: hidden;
 		opacity: 0;
 	}
 	100% {
+		visibility: visible;
 		opacity: 1;
 	}
 }
