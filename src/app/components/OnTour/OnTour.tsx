@@ -59,8 +59,8 @@ export default function OnTour() {
 					/>
 				</div>
 				{dates != null ? (
-					dates.slice(0, 6).map((i) => (
-						<div className={styles.dateContainer}>
+					dates.slice(0, 6).map((i, index) => (
+						<div key={index} className={styles.dateContainer}>
 							<div className={styles.leftDivContainer}>
 								<div className={styles.leftDiv}>
 									<h5>{i[0]}</h5>
@@ -82,8 +82,8 @@ export default function OnTour() {
 					<></>
 				)}
 				{dates != null && showAllDates
-					? dates.slice(6).map((i) => (
-							<div className={styles.dateContainer}>
+					? dates.slice(6).map((i, index) => (
+							<div key={index} className={styles.dateContainer}>
 								<div className={styles.leftDivContainer}>
 									<div className={styles.leftDiv}>
 										<h5>{i[0]}</h5>
