@@ -2,6 +2,10 @@
 	@apply h-[220svh] -translate-y-[12svh] sm:-translate-y-[10svh] bg-gradient-to-r from-[rgb(3,10,28)] from-20% via-[rgb(2,14,33)] via-30% to-[rgb(0,18,38)];
 }
 
+.transitionContainer {
+	@apply h-[3svh] bg-gradient-to-t from-black -translate-y-[3svh];
+}
+
 .heroContainer {
 	@apply shadow-lg;
 }

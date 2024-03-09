@@ -1,8 +1,9 @@
 export default function TikTokLogo() {
 	return (
 		<svg
-			className='h-[20px] w-[20px]'
-			viewBox='0 0 27 30'
+			height='20'
+			width='20'
+			viewBox='0 0 29 29'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'>
 			<path

@@ -16,6 +16,51 @@
 	}
 }
 
+.dropDown-enter {
+	opacity: 0;
+	transform: scale(0.9);
+	visibility: hidden;
+}
+
+.dropDown-enter-active {
+	opacity: 1;
+	transform: scale(1);
+	visibility: visible; /* Add this line */
+	animation: 400ms ease-in-out 0s 1 flyIn;
+}
+
+.dropDown-exit-active {
+	opacity: 1;
+	transform: scale(0.9);
+	animation: 600ms ease-in-out 0s 1 flyOut;
+}
+
+.dropDown-exit-done {
+	opacity: 0;
+}
+
+@keyframes flyIn {
+	0% {
+		opacity: 0%;
+		transform: translateY(200%);
+	}
+	100% {
+		opacity: 100%;
+		transform: translateY(0%);
+	}
+}
+
+@keyframes flyOut {
+	0% {
+		opacity: 100%;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0%;
+		transform: translateY(200%);
+	}
+}
+
 body {
 	color: rgb(var(--foreground-rgb));
 	background: linear-gradient(

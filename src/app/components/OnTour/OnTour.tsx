@@ -1,11 +1,45 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import styles from './OnTour.module.css';
 import headerImg from '/public/tourHeader.png';
 import fullSizeBg from '/public/tourBG.jpg';
 import { Prata } from 'next/font/google';
+import { formatDates } from '../../../config/helpers';
 
 const prata = Prata({ weight: '400', subsets: ['latin'] });
 export default function OnTour() {
+	const [dates, setDates] = useState<string[][] | null>(null);
+	const [showAllDates, setShowAllDates] = useState(false);
+	const fetchTourDates = async () => {
+		try {
+			const res = await fetch(
+				'https://rest.bandsintown.com/artists/Erin%20Stoll/events/?app_id=d867af9b8a7926a4ff4a866182aeb2e9'
+			);
+
+			if (res.ok) {
+				const resObject = await res.json();
+				const formattedDates = formatDates(resObject);
+				setDates(() => formattedDates);
+			}
+		} catch {
+			console.log('error fetching data from bands in town');
+		}
+	};
+
+	const handleTourDates = async () => {
+		dates == null ? await fetchTourDates() : null;
+	};
+
+	useEffect(() => {
+		handleTourDates();
+	}, [dates]);
+
+	const handleShowAllDates = async () => {
+		setShowAllDates((prevState) => !prevState);
+	};
+
 	return (
 		<section className={styles.tourContainer}>
 			<Image
@@ -24,69 +58,52 @@ export default function OnTour() {
 						alt='on_tour_header'
 					/>
 				</div>
-				<div className={styles.dateContainer}>
-					<div className={styles.leftDivContainer}>
-						<div className={styles.leftDiv}>
-							<h5>March 2, 2024</h5>
-							<h3>Sunny Slope Winery</h3>
+				{dates != null ? (
+					dates.slice(0, 6).map((i) => (
+						<div className={styles.dateContainer}>
+							<div className={styles.leftDivContainer}>
+								<div className={styles.leftDiv}>
+									<h5>{i[0]}</h5>
+									<h3>{i[1]}</h3>
+								</div>
+							</div>
+							<div className={styles.centerDiv}>{i[2]}</div>
+							<div className={styles.rightDiv}>
+								{/* TODO: this button goes nowhere */}
+								<button
+									onClick={() => handleTourDates()}
+									className={styles.notifyButton}>
+									notify me
+								</button>
+							</div>
 						</div>
-					</div>
-					<div className={styles.centerDiv}>Big Prarie, OH</div>
-					<div className={styles.rightDiv}>
-						<button className={styles.notifyButton}>notify me</button>
-					</div>
-				</div>
-				<div className={styles.dateContainer}>
-					<div className={styles.leftDivContainer}>
-						<div className={styles.leftDiv}>
-							<h5>March. 8, 2024</h5>
-							<h3>Fox News in the Morning</h3>
-						</div>
-					</div>
-					<div className={styles.centerDiv}>Live Stream @ 7:30AM </div>
-					<div className={styles.rightDiv}>
-						<button className={styles.notifyButton}>notify me</button>
-					</div>
-				</div>
-				<div className={styles.dateContainer}>
-					<div className={styles.leftDivContainer}>
-						<div className={styles.leftDiv}>
-							<h5>March. 15, 2024</h5>
-							<h3>Erins Music Release Party</h3>
-						</div>
-					</div>
-					<div className={styles.centerDiv}>Wadsworth, OH</div>
-					<div className={styles.rightDiv}>
-						<button className={styles.notifyButton}>notify me</button>
-					</div>
-				</div>
-				<div className={styles.dateContainer}>
-					<div className={styles.leftDivContainer}>
-						<div className={styles.leftDiv}>
-							<h5>March. 23, 2024</h5>
-							<h3>Welcome to the Farm</h3>
-						</div>
-					</div>
-					<div className={styles.centerDiv}>Cleveland, OH</div>
-					<div className={styles.rightDiv}>
-						<button className={styles.notifyButton}>notify me</button>
-					</div>
-				</div>
-				<div className={styles.dateContainer}>
-					<div className={styles.leftDivContainer}>
-						<div className={styles.leftDiv}>
-							<h5>March. 29, 2024</h5>
-							<h3>Lobys Grille</h3>
-						</div>
-					</div>
-					<div className={styles.centerDiv}>Canton, OH</div>
-					<div className={styles.rightDiv}>
-						<button className={styles.notifyButton}>notify me</button>
-					</div>
-				</div>
+					))
+				) : (
+					<></>
+				)}
+				{dates != null && showAllDates
+					? dates.slice(6).map((i) => (
+							<div className={styles.dateContainer}>
+								<div className={styles.leftDivContainer}>
+									<div className={styles.leftDiv}>
+										<h5>{i[0]}</h5>
+										<h3>{i[1]}</h3>
+									</div>
+								</div>
+								<div className={styles.centerDiv}>{i[2]}</div>
+								<div className={styles.rightDiv}>
+									<button
+										onClick={() => handleTourDates()}
+										className={styles.notifyButton}>
+										notify me
+									</button>
+								</div>
+							</div>
+					  ))
+					: null}
 				<div className={styles.seeAllContainer}>
-					<button className={styles.seeAllButton}>
-						Full Schedule Coming Soon
+					<button onClick={handleShowAllDates} className={styles.seeAllButton}>
+						{showAllDates ? 'Close' : 'See All'}
 					</button>
 				</div>
 			</div>

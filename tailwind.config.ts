@@ -10,9 +10,11 @@ const config: Config = {
 		screens: {
 			sm: '640px',
 			// => @media (min-width: 640px) { ... }
+			// These custom breakpoints are for specifying hero size only.
 			mobileHeroSM: '450px',
 			inBetweenMobileHero: '500px',
 			inBetweenMobileHeroOne: '550px',
+
 			md: '768px',
 
 			lg: '1024px',

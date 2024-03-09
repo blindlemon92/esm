@@ -1,11 +1,15 @@
 'use client';
 
-import Image from 'next/image';
-import styles from './Hero.module.css';
+import heroLineOne from '/public/countryGirls_countryGirls.png';
+import heroLineTwo from '/public/doItBetter_countryGirls.png';
+import heroLineThree from '/public/available_countryGirls.png';
 import heroAdd from '/public/doItBetter.png';
-import mobileHeroXS from '/public/mobileHero.jpg';
-import mobileHero from '/public/heroMobile2.jpg';
 import heroImage from '/public/heroImg.jpg';
+import mobileHero from '/public/heroMobile2.jpg';
+import mobileHeroXS from '/public/mobileHero.jpg';
+import Image from 'next/image';
+
+import styles from './Hero.module.css';
 
 export default function Hero() {
 	return (
@@ -21,7 +25,11 @@ export default function Hero() {
 						fill
 						sizes='90vw'
 					/>
-
+					<Image
+						alt='country_girls'
+						className={styles.fullHeroLineOne}
+						src={heroLineOne}
+					/>
 					<Image
 						className={styles.heroAdd}
 						src={heroAdd}
@@ -38,7 +46,6 @@ export default function Hero() {
 						fill
 						sizes='100vw'
 					/>
-
 					<Image
 						className={styles.inBetweenHeroAdd}
 						src={heroAdd}
@@ -55,11 +62,27 @@ export default function Hero() {
 						fill
 						sizes='100vw'
 					/>
-					<Image
-						className={styles.mobileHeroAdd}
-						src={heroAdd}
-						alt='Country_girls_do_it_better'
-					/>
+					<div className={styles.mobileHeroAdd}>
+						<Image
+							alt='country_girls'
+							className={styles.heroLineOne}
+							src={heroLineOne}
+						/>
+						<Image
+							alt='do_it_better'
+							className={styles.heroLineTwo}
+							src={heroLineTwo}
+						/>
+						<Image
+							alt='country_girls'
+							className={styles.heroLineThree}
+							src={heroLineThree}
+						/>
+					</div>
+					{/* TODO: FIX OR DELETE */}
+					{/* <div className={styles.gradientContainer}>
+						this is the gradient container
+					</div> */}
 				</div>
 			</div>
 		</section>

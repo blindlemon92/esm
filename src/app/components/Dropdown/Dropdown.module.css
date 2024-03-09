@@ -1,16 +1,7 @@
 .dropdownSection {
-	animation: 400ms ease-in-out 0s 1 flyIn;
 	@apply z-10 h-[100svh] bg-[#9DD9D2] opacity-90;
 }
 
-@keyframes flyIn {
-	0% {
-		transform: translateY(200%);
-	}
-	100% {
-		transform: translateY(0%);
-	}
-}
 .dropdownSection {
 	@apply relative -top-[4rem];
 }
@@ -24,59 +15,56 @@
 }
 
 .socialsContainer {
+	animation-delay: 0.5s;
 	animation: 0.5s ease-out 0s 1 slideinFromLeft;
 	@apply flex flex-col place-items-end gap-6 mr-[2rem] border-white;
 }
 
 @keyframes slideinFromLeft {
 	0% {
-		transform: translateX(-70%);
+		opacity: 0%;
+		transform: translateX(-200%);
 	}
 	100% {
+		opacity: 100%;
 		transform: translateX(0%);
 	}
 }
 
-.aboutLink {
-	visibility: hidden;
-	opacity: 0;
-	animation: fadeInSlow 1s ease forwards;
-	animation-delay: 0.25s;
-}
+/* TODO: the animations within the Dropdown itself need to be set up */
 
 .aboutLink {
 	visibility: hidden;
 	opacity: 0;
-	animation: fadeInSlow 1s ease forwards;
-	animation-delay: 0.25s;
+	animation: fadeInSlow 0.75s ease forwards;
+	animation-delay: 0.45s;
 }
 
 .newsLink {
 	visibility: hidden;
 	opacity: 0;
-	animation: fadeInSlow 1s ease forwards;
-	animation-delay: 0.3s;
+	animation: fadeInSlow 0.75s ease forwards;
+	animation-delay: 0.6s;
 }
-
 .tourLink {
 	visibility: hidden;
 	opacity: 0;
-	animation: fadeInSlow 1s ease forwards;
-	animation-delay: 0.35s;
+	animation: fadeInSlow 0.75s ease forwards;
+	animation-delay: 0.8s;
 }
 
 .mediaLink {
 	visibility: hidden;
 	opacity: 0;
-	animation: fadeInSlow 1s ease forwards;
-	animation-delay: 0.4s;
+	animation: fadeInSlow 0.75s ease forwards;
+	animation-delay: 1s;
 }
 
 .contactLink {
 	visibility: hidden;
 	opacity: 0;
-	animation: fadeInSlow 1s ease forwards;
-	animation-delay: 0.45s;
+	animation: fadeInSlow 0.75s ease forwards;
+	animation-delay: 1.2s;
 }
 
 @keyframes fadeInSlow {

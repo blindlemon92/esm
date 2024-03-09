@@ -3,8 +3,8 @@
 import siteLogo from '/public/nameLogo.png';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-
+import { useState, useEffect, useRef } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import AmazonLogo from '../svgs/AmazonLogo/AmazonLogo';
 
 import TikTokLogo from '../svgs/TikTokLogo/TikTokLogo';
@@ -23,22 +23,12 @@ const hammersmith = Hammersmith_One({ weight: '400', subsets: ['latin'] });
 
 export default function Navbar() {
 	const [dropdownOpen, setDropdownOpen] = useState(false);
-	const [BurgerOrNothing, setBurgerOrNothing] = useState(<BurgerLogo />);
-	const [isScrolled, setIsScrolled] = useState(false);
 
-	const handleDropdown = () => {
+	const [isScrolled, setIsScrolled] = useState(false);
+	const nodeRef = useRef(null);
+	const handleDropdown = async () => {
 		setDropdownOpen((prevState) => !prevState);
 	};
-
-	const handleBurgerOrNothing = async () => {
-		let value = <></>;
-		dropdownOpen ? null : (value = <BurgerLogo />);
-		setBurgerOrNothing(() => value);
-	};
-
-	useEffect(() => {
-		handleBurgerOrNothing();
-	}, [dropdownOpen]);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -115,7 +105,7 @@ export default function Navbar() {
 							</Link>
 						</div>
 						<button onClick={() => handleDropdown()} className={styles.burger}>
-							{BurgerOrNothing}
+							{dropdownOpen ? <></> : <BurgerLogo />}
 						</button>
 					</div>
 					<div className={styles.linksContainer}>
@@ -131,13 +121,10 @@ export default function Navbar() {
 						</ul>
 					</div>
 					<div className={styles.dropdownContainer}>
-						{dropdownOpen ? (
-							<>
-								<Dropdown setDropdownOpen={setDropdownOpen} />
-							</>
-						) : (
-							<></>
-						)}
+						<Dropdown
+							dropdownOpen={dropdownOpen}
+							setDropdownOpen={setDropdownOpen}
+						/>
 					</div>
 				</div>
 			</section>

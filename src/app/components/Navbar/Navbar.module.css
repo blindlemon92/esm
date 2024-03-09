@@ -4,7 +4,7 @@
 
 .erinLogo {
 	visibility: hidden;
-	animation: fadeInAnimation ease 1.5s 0.75s 1 forwards;
+	animation: fadeInAnimation ease 5s 1s 1 forwards;
 	@apply flex w-[180px] md:w-[170px] lg:w-[250px] mt-2;
 }
 

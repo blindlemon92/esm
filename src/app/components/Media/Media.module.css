@@ -1,0 +1,7 @@
+.mediaSection {
+	@apply grid grid-cols-2 place-items-center;
+}
+
+.mediaSection > * {
+	@apply my-2;
+}

@@ -7,7 +7,7 @@
 }
 
 .heroAdd {
-	@apply absolute w-2/3 top-1/3 left-1/3 shadow-xl;
+	@apply absolute w-2/3 top-1/3 left-1/3;
 }
 
 .inBetweenContainer {
@@ -19,7 +19,7 @@
 }
 
 .inBetweenHeroAdd {
-	@apply absolute top-24 shadow-xl;
+	@apply absolute top-24;
 }
 
 .mobileContainer {
@@ -27,46 +27,47 @@
 }
 
 .mobileHeroImg {
-	@apply object-cover;
+	@apply object-cover bg-gradient-to-b from-inherit to-transparent;
 }
 
 .mobileHeroAdd {
-	@apply absolute w-[80%] top-1/4 shadow-xl;
+	@apply absolute w-[80%] top-1/4;
 }
 
-/* .heroImg {
-	@apply hidden md:block;
-}
-
-.mobileHeroImgMd {
-	@apply hidden sm:block md:hidden;
-}
-
-.mobileHeroImg {
-	@apply flex sm:hidden h-auto;
-}
-
-.heroAdd {
-	@apply absolute flex;
-}
-
-.messageContainer {
+.heroLineOne {
 	visibility: hidden;
-	animation: fadeInSlow ease 3s 1s forwards;
-	@apply absolute flex flex-col place-items-center mt-[20svh] sm:mt-[9svh] w-3/4 md:mr-[10svw]  whitespace-nowrap md:hidden;
+	opacity: 0;
+	animation: fadeInSlow 3s ease forwards;
+	animation-delay: 1.75s;
+	@apply absolute;
+}
+
+.heroLineTwo {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	animation: fadeInSlow 3s ease forwards;
+	animation-delay: 2s;
+}
+
+.heroLineThree {
+	visibility: hidden;
+	opacity: 0;
+	animation: fadeInSlow 3s ease forwards;
+	animation-delay: 3.5s;
 }
 
 @keyframes fadeInSlow {
 	0% {
-		visibility: hidden;
 		opacity: 0;
+		visibility: hidden;
 	}
 	100% {
-		visibility: visible;
 		opacity: 1;
+		visibility: visible;
 	}
 }
 
-.outNow {
-	@apply p-3 mt-2 sm:mt-3 md:mt-6 bg-black font-bold text-xs tracking-widest;
-} */
+.gradientContainer {
+	@apply h-[5svh] relative border-white border-[9px];
+}
