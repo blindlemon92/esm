@@ -12,10 +12,10 @@ export default function Home() {
 			</div>
 			<div className={styles.transitionContainer}></div>
 			<div>
-				<OnTour />
+				<AboutElement />
 			</div>
 			<div>
-				<AboutElement />
+				<OnTour />
 			</div>
 			<div>
 				<Media />
