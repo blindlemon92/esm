@@ -25,16 +25,24 @@ export default function Hero() {
 						fill
 						sizes='90vw'
 					/>
-					<Image
-						alt='country_girls'
-						className={styles.fullHeroLineOne}
-						src={heroLineOne}
-					/>
-					<Image
-						className={styles.heroAdd}
-						src={heroAdd}
-						alt='Country_girls_do_it_better'
-					/>
+
+					<div className={styles.fullHeroAdd}>
+						<Image
+							alt='country_girls'
+							className={styles.heroLineOne}
+							src={heroLineOne}
+						/>
+						<Image
+							className={styles.heroLineTwo}
+							src={heroLineTwo}
+							alt='Country_girls_do_it_better'
+						/>
+						<Image
+							className={styles.heroLineThree}
+							src={heroLineThree}
+							alt='Country_girls_do_it_better'
+						/>
+					</div>
 				</div>
 				<div className={styles.inBetweenContainer}>
 					<Image
@@ -46,11 +54,24 @@ export default function Hero() {
 						fill
 						sizes='100vw'
 					/>
-					<Image
-						className={styles.inBetweenHeroAdd}
-						src={heroAdd}
-						alt='Country_girls_do_it_better'
-					/>
+
+					<div className={styles.inBetweenHeroAdd}>
+						<Image
+							className={styles.heroLineOne}
+							src={heroLineOne}
+							alt='Country_girls_do_it_better'
+						/>
+						<Image
+							className={styles.heroLineTwo}
+							src={heroLineTwo}
+							alt='Country_girls_do_it_better'
+						/>
+						<Image
+							className={styles.heroLineThree}
+							src={heroLineThree}
+							alt='Country_girls_do_it_better'
+						/>
+					</div>
 				</div>
 				<div className={styles.mobileContainer}>
 					<Image

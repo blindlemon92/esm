@@ -1,13 +1,13 @@
 .tourContainer {
-	@apply flex bg-[rgb(166,98,52)] h-auto;
+	@apply relative bg-[rgb(166,98,52)];
 }
 
 .fullSizeBg {
-	@apply object-contain flex absolute bg-fixed z-0;
+	@apply absolute border-white;
 }
 
 .headerContainer {
-	@apply z-30 bg-opacity-40 lg:py-10 md:w-[90svw] mr-[5svw] ml-[5svw];
+	@apply relative flex flex-col z-30 bg-opacity-40 lg:py-10 md:w-[90svw] mr-[5svw] ml-[5svw];
 }
 
 .live {
@@ -19,15 +19,15 @@
 }
 
 .headerImg {
-	@apply scale-[1.1] sm:scale-[1] md:px-[5svw] z-50;
+	@apply z-50;
 }
 
 .dateContainer {
-	@apply shadow-lg grid grid-cols-3 mt-5 bg-amber-800 px-2 rounded-2xl bg-opacity-40;
+	@apply flex justify-between mt-5 bg-amber-800 px-2 rounded-2xl bg-opacity-40;
 }
 
 .leftDivContainer {
-	@apply shadow-lg flex justify-items-center whitespace-nowrap;
+	@apply shadow-lg justify-items-center whitespace-nowrap;
 }
 
 .leftDiv {
@@ -48,6 +48,24 @@
 
 .seeAllContainer {
 	@apply w-full flex justify-center;
+}
+
+.tourDates-enter {
+	visibility: hidden;
+}
+
+.tourDates-enter-active {
+	visibility: visible;
+	transition: opacity 200ms;
+}
+.tourDates-exit {
+	opacity: 1;
+	transition: opacity 200ms;
+}
+
+.tourDates-exit-active {
+	opacity: 0;
+	transition: opacity 200ms;
 }
 
 .seeAllButton {
