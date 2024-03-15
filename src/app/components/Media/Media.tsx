@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import countryScene from '@/public/ben-collins-CGdKv4BA6GQ-unsplash.jpg';
-import heading from '@/public/mediaHeading.png';
+import heading from '@/public/mediaHeader.png';
 
 import styles from './Media.module.css';
 export default function Media() {
@@ -8,7 +8,7 @@ export default function Media() {
 		<section className={styles.mediaSection}>
 			<div>
 				<Image
-					className={styles.headerContainers}
+					className={styles.headerContainer}
 					src={heading}
 					alt='media_heading'
 				/>

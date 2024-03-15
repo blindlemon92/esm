@@ -54,6 +54,7 @@
 }
 
 .mediaLink {
+	@apply ml-6 py-2;
 	visibility: hidden;
 	opacity: 0;
 	animation: fadeInSlow 0.75s ease forwards;

@@ -7,5 +7,5 @@
 }
 
 .headerContainer {
-	@apply w-[10svw];
+	@apply ml-4;
 }
