@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import countryScene from '@/public/ben-collins-CGdKv4BA6GQ-unsplash.jpg';
-import heading from '@/public/mediaHeader.png';
+import heading from '@/public/MediaHeader.png';
 
 import styles from './Media.module.css';
 export default function Media() {
