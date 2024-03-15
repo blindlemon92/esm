@@ -1,0 +1,3 @@
+.contactMeContainer {
+	@apply bg-red-200 h-[75svh] w-[75svw] mx-auto mt-[15svh] p-4 rounded-xl flex flex-col;
+}

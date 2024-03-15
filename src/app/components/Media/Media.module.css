@@ -1,7 +1,11 @@
 .mediaSection {
-	@apply grid grid-cols-2 place-items-center;
+	@apply relative bg-gradient-to-bl from-[rgb(108,142,143)] to-transparent bg-opacity-90 z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center;
 }
 
 .mediaSection > * {
 	@apply my-2;
+}
+
+.headerContainer {
+	@apply w-[10svw];
 }

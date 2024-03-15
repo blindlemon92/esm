@@ -110,14 +110,22 @@ export default function Navbar() {
 					</div>
 					<div className={styles.linksContainer}>
 						<ul className={hammersmith.className}>
-							{/* TODO: the href's here for what will be Nextjs Link elements.. they will match a hashtag followed by the id */}
+							{/* TODO: the href's here f,or what will be Nextjs Link elements.. they will match a hashtag followed by the id */}
 							<li className={styles.localLink}>
-								<Link href='#aboutSection'>ABOUT</Link>
+								<Link href='/#aboutSection'>ABOUT</Link>
 							</li>
-							<li className={styles.localLink}>NEWS</li>
-							<li className={styles.localLink}>TOUR</li>
-							<li className={styles.localLink}>MEDIA</li>
-							<li className={styles.localLink}>CONTACT</li>
+							<li className={styles.localLink}>
+								<Link href='/#merchStore'>SHOP</Link>
+							</li>
+							<li className={styles.localLink}>
+								<Link href='/#tourSection'>TOUR</Link>
+							</li>
+							<li className={styles.localLink}>
+								<Link href='/#mediaSection'>MEDIA</Link>
+							</li>
+							<li className={styles.localLink}>
+								<Link href='./Contact-Me'>CONTACT</Link>
+							</li>
 						</ul>
 					</div>
 					<div className={styles.dropdownContainer}>

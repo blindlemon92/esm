@@ -14,6 +14,7 @@ export const formatDates = (dates: rawEventArray) => {
 		formatDatetime(new Date(i.datetime)),
 		i.venue.location,
 		i.venue.name,
+		i.url,
 	]);
 	return formattedDates;
 };

@@ -1,5 +1,5 @@
 .erinLogoContainer {
-	@apply bg-opacity-40 px-2 py-1 rounded-xl md:translate-x-7 lg:translate-x-14  drop-shadow-lg mx-6;
+	@apply bg-opacity-40 text-white px-2 py-1 rounded-xl md:translate-x-7 lg:translate-x-14  drop-shadow-lg mx-6;
 }
 
 .erinLogo {

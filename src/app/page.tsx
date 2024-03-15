@@ -1,6 +1,10 @@
+'use client';
+
 import AboutElement from './components/AboutElement/AboutElement';
 import Hero from './components/Hero/Hero';
+import { ImageGrid } from './components/ImgGrid/ImgGrid';
 import Media from './components/Media/Media';
+import MerchStore from './components/MerchStore/MerchStore';
 import OnTour from './components/OnTour/OnTour';
 import styles from './Home.module.css';
 
@@ -11,13 +15,19 @@ export default function Home() {
 				<Hero />
 			</div>
 			<div className={styles.transitionContainer}></div>
-			<div>
+			<div id='aboutSection' className={styles.aboutContainer}>
 				<AboutElement />
 			</div>
-			<div>
+			<div className={styles.transitionContainerTwo}></div>
+			<div id='merchStore'>
+				<MerchStore />
+			</div>
+
+			<div id='tourSection'>
 				<OnTour />
 			</div>
-			<div>
+			<div className={styles.transitionContainerThree}></div>
+			<div id='mediaSection'>
 				<Media />
 			</div>
 		</section>

@@ -16,6 +16,7 @@ export default function AboutElement() {
 					src={gradientAbout}
 					alt='about_element_header'
 				/>
+
 				<h3 className={libre.className}>
 					An award-winning country singer from Ohio, Erin seamlessly blends
 					modern country with a soulful twist.

@@ -1,5 +1,5 @@
 .tourContainer {
-	@apply relative bg-[rgb(166,98,52)];
+	@apply relative -translate-y-[.5svh] bg-[rgb(166,98,52)] shadow-inner;
 }
 
 .fullSizeBg {
@@ -7,11 +7,11 @@
 }
 
 .headerContainer {
-	@apply relative flex flex-col z-30 bg-opacity-40 lg:py-10 md:w-[90svw] mr-[5svw] ml-[5svw];
+	@apply relative flex flex-col z-30 bg-opacity-40 md:w-[90svw] mr-[5svw] ml-[5svw];
 }
 
 .live {
-	@apply text-sm md:text-xl text-center p-3 md:pt-2;
+	@apply text-sm md:text-xl text-center pl-3 pr-3 pt-3 mt-8;
 }
 
 .headerImgContainer {

@@ -1,21 +1,21 @@
 .aboutElement {
-	@apply shadow-inner text-white sm:grid sm:grid-cols-2 place-items-center justify-items-center bg-gradient-to-b from-[rgb(13,13,13)] to-[rgb(166,98,52)];
+	@apply md:pl-[2rem] shadow-inner h-full text-white sm:grid sm:grid-cols-2 place-items-center justify-items-center bg-gradient-to-b from-[rgb(13,13,13)] to-[rgb(166,98,52)];
 }
 
 .headerContainer {
-	@apply flex flex-col place-items-center top-0 px-2 md:px-4 lg:px-6;
-}
-
-.bioSpan {
-	@apply drop-shadow-xl text-base px-2 mt-4;
+	@apply flex flex-col h-auto place-items-center top-0 px-2 md:px-4;
 }
 
 .headerContainer > h3 {
-	@apply text-xl  text-white px-3 font-bold drop-shadow-lg;
+	@apply lg:text-[38px] leading-tight;
+}
+
+.bioSpan {
+	@apply drop-shadow-xl leading-normal lg:text-[26px] px-2 mt-4;
 }
 
 .aboutHeader {
-	@apply w-auto;
+	@apply h-auto lg:max-w-[700px];
 }
 
 .erinVintageFrameMobile {

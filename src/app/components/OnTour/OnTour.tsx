@@ -8,6 +8,7 @@ import headerImg from '/public/tourHeader.png';
 import fullSizeBg from '/public/tourBG.jpg';
 import { Prata } from 'next/font/google';
 import { formatDates } from '../../../config/helpers';
+import Link from 'next/link';
 
 const prata = Prata({ weight: '400', subsets: ['latin'] });
 export default function OnTour() {
@@ -57,7 +58,7 @@ export default function OnTour() {
 			/>
 			<div className={styles.headerContainer}>
 				<div className={prata.className}>
-					<h4 className={styles.live}>LIVE | 2024</h4>,
+					<h4 className={styles.live}>LIVE | 2024</h4>
 				</div>
 				<div className={styles.headerImgContainer}>
 					<Image
@@ -78,10 +79,10 @@ export default function OnTour() {
 								<div className={styles.centerDiv}>{i[2]}</div>
 								<div className={styles.rightDiv}>
 									{/* TODO: this button goes nowhere */}
-									<button
-										onClick={() => handleTourDates()}
-										className={styles.notifyButton}>
-										notify me
+									<button className={styles.notifyButton}>
+										<Link target='_blank' href={i[3]}>
+											notify me
+										</Link>
 									</button>
 								</div>
 							</div>
@@ -105,10 +106,10 @@ export default function OnTour() {
 										</div>
 										<div className={styles.centerDiv}>{i[2]}</div>
 										<div className={styles.rightDiv}>
-											<button
-												onClick={() => handleTourDates()}
-												className={styles.notifyButton}>
-												notify me
+											<button className={styles.notifyButton}>
+												<Link target='_blank' href={i[3]}>
+													notify me
+												</Link>
 											</button>
 										</div>
 									</div>

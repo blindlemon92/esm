@@ -3,9 +3,13 @@
 }
 
 .transitionContainer {
-	@apply h-[1svh] bg-gradient-to-t from-black -translate-y-[1svh];
+	@apply h-[2svh] bg-gradient-to-b from-transparent to-black -translate-y-[2svh];
 }
 
-.heroContainer {
-	@apply shadow-lg;
+.transitionContainerTwo {
+	@apply h-[4svh] -translate-y-[.5svh] bg-gradient-to-t from-[rgb(108,142,143)] via-30% to-[rgb(166,98,52)] transition-opacity;
+}
+
+.transitionContainerThree {
+	@apply h-[4svh] -translate-y-[.5svh] bg-gradient-to-b from-[rgb(168,98,52)] from-30% to-black opacity-45;
 }
