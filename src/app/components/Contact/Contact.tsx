@@ -8,8 +8,15 @@ import {
 	Title,
 	Button,
 } from '@mantine/core';
+import { useState } from 'react';
 import { useForm } from '@mantine/form';
 
+export type MessageT = {
+	name: string;
+	email: string;
+	subject: string;
+	message: string;
+};
 export function Contact() {
 	const form = useForm({
 		initialValues: {
@@ -25,8 +32,29 @@ export function Contact() {
 		},
 	});
 
+	const [userMessage, setUserMessage] = useState();
+
+	const handleSubmit = async (e: MessageT) => {
+		try {
+			const response = await fetch('/api/send', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({ e }),
+			});
+			const data = await response.json();
+			console.log(data);
+		} catch {
+			console.log('error');
+		}
+	};
+
 	return (
-		<form onSubmit={form.onSubmit(() => {})}>
+		<form
+			onSubmit={form.onSubmit((e) => {
+				handleSubmit(e);
+			})}>
 			<Title
 				order={2}
 				size='h1'

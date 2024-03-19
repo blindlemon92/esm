@@ -6,12 +6,16 @@
 	@apply relative -top-[4rem];
 }
 
+.navigationLinks {
+	@apply flex flex-col;
+}
+
 .closeIconButton {
 	@apply flex w-full justify-end;
 }
 
 .closeIcon {
-	@apply drop-shadow-xl m-2;
+	@apply drop-shadow-xl m-2 p-3;
 }
 
 .socialsContainer {
@@ -54,7 +58,6 @@
 }
 
 .mediaLink {
-	@apply ml-6 py-2;
 	visibility: hidden;
 	opacity: 0;
 	animation: fadeInSlow 0.75s ease forwards;

@@ -45,7 +45,7 @@
 }
 
 .linksContainer > ul {
-	@apply hidden text-xs lg:text-[15px] md:flex w-[50svw] mx-auto justify-center items-center md:gap-[1rem] lg:gap-[3rem];
+	@apply hidden text-xs text-white lg:text-[15px] md:flex w-[50svw] mx-auto justify-center items-center md:gap-[1rem] lg:gap-[3rem];
 }
 
 .localLink {

@@ -21,6 +21,12 @@
 			"@/public/*": ["./public/*"]
 		}
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts",
+		"src/app/pages/contact-me/api/init-db.js"
+	],
 	"exclude": ["node_modules"]
 }
