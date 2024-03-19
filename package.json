@@ -9,6 +9,7 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@emailjs/browser": "^4.3.3",
 		"@mantine/carousel": "^7.6.2",
 		"@mantine/core": "^7.6.2",
 		"@mantine/form": "^7.6.2",

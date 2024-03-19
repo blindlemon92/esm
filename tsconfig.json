@@ -26,7 +26,7 @@
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		"src/app/pages/contact-me/api/init-db.js"
+		"src/app/(pages)/contact-me/api/init-db.js"
 	],
 	"exclude": ["node_modules"]
 }

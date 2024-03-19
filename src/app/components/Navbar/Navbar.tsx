@@ -123,9 +123,9 @@ export default function Navbar() {
 							<li className={styles.localLink}>
 								<Link href='/#mediaSection'>MEDIA</Link>
 							</li>
-							{/* <li className={styles.localLink}>
+							<li className={styles.localLink}>
 								<Link href='./pages/contact-me'>CONTACT</Link>
-							</li> */}
+							</li>
 						</ul>
 					</div>
 					<div className={styles.dropdownContainer}>

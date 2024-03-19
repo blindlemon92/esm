@@ -100,15 +100,15 @@ export const Dropdown: React.FC<DropdownProps> = ({
 								/>
 							</Link>
 						</button>
-						{/* <button onClick={(e) => handleClose(e)}>
-							<Link href='#contactSection'>
+						<button onClick={(e) => handleClose(e)}>
+							<Link href='/contact-me'>
 								<Image
 									className={styles.contactLink}
 									src={contactIcon}
 									alt='link_to_contact'
 								/>
 							</Link>
-						</button> */}
+						</button>
 					</div>
 					<div className={styles.socialsContainer}>
 						<Link

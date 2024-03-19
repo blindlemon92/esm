@@ -8,9 +8,10 @@ import {
 	Title,
 	Button,
 } from '@mantine/core';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useForm } from '@mantine/form';
-
+import emailjs from '@emailjs/browser';
+import { useRouter } from 'next/navigation';
 export type MessageT = {
 	name: string;
 	email: string;
@@ -33,18 +34,24 @@ export function Contact() {
 	});
 
 	const [userMessage, setUserMessage] = useState();
-
+	const formRef = useRef<any>();
+	const router = useRouter();
 	const handleSubmit = async (e: MessageT) => {
 		try {
-			const response = await fetch('/api/send', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({ e }),
-			});
-			const data = await response.json();
-			console.log(data);
+			emailjs
+				.sendForm('service_nhiegs9', 'template_60mf75o', formRef.current, {
+					publicKey: 'FZpEuD7nIWD7RL6ce',
+				})
+				.then(
+					(res) => {
+						if (res) {
+							router.push('/');
+						}
+					},
+					(error) => {
+						console.log('failed');
+					}
+				);
 		} catch {
 			console.log('error');
 		}
@@ -52,6 +59,7 @@ export function Contact() {
 
 	return (
 		<form
+			ref={formRef}
 			onSubmit={form.onSubmit((e) => {
 				handleSubmit(e);
 			})}>
