@@ -1,12 +1,15 @@
 'use client';
 
 import heroLineOne from '/public/countryGirls_countryGirls.png';
-import heroLineTwo from '/public/doItBetter_countryGirls.png';
-import heroLineThree from '/public/available_countryGirls.png';
-import heroAdd from '/public/doItBetter.png';
+
+import heroMobileCountryGirls from '/public/countryGirlsMobile.png';
+import heroMobileDoItBetter from '/public/mobileDoItBetter.png';
+import newDoItBetter from '/public/newDoItBetter.png';
+
 import heroImage from '/public/heroImg.jpg';
 import mobileHero from '/public/heroMobile2.jpg';
 import mobileHeroXS from '/public/mobileHero.jpg';
+import Link from 'next/link';
 import Image from 'next/image';
 
 import styles from './Hero.module.css';
@@ -34,14 +37,19 @@ export default function Hero() {
 						/>
 						<Image
 							className={styles.heroLineTwo}
-							src={heroLineTwo}
+							src={newDoItBetter}
 							alt='Country_girls_do_it_better'
 						/>
-						<Image
-							className={styles.heroLineThree}
-							src={heroLineThree}
-							alt='Country_girls_do_it_better'
-						/>
+						<div className={styles.heroLineThreeFull}>
+							<span className='animate-pulse'>
+								<Link
+									className={styles.heroAvailableNowFull}
+									target='_blank'
+									href='https://music.apple.com/us/artist/erin-stoll/1131483440'>
+									AVAILABLE NOW
+								</Link>
+							</span>
+						</div>
 					</div>
 				</div>
 				<div className={styles.inBetweenContainer}>
@@ -63,14 +71,19 @@ export default function Hero() {
 						/>
 						<Image
 							className={styles.heroLineTwo}
-							src={heroLineTwo}
+							src={newDoItBetter}
 							alt='Country_girls_do_it_better'
 						/>
-						<Image
-							className={styles.heroLineThree}
-							src={heroLineThree}
-							alt='Country_girls_do_it_better'
-						/>
+						<div className={styles.heroLineThreeFull}>
+							<span className='animate-pulse'>
+								<Link
+									className={styles.heroAvailableNowFull}
+									target='_blank'
+									href='https://music.apple.com/us/artist/erin-stoll/1131483440'>
+									AVAILABLE NOW
+								</Link>
+							</span>
+						</div>
 					</div>
 				</div>
 				<div className={styles.mobileContainer}>
@@ -87,23 +100,24 @@ export default function Hero() {
 						<Image
 							alt='country_girls'
 							className={styles.heroLineOne}
-							src={heroLineOne}
+							src={heroMobileCountryGirls}
 						/>
 						<Image
 							alt='do_it_better'
 							className={styles.heroLineTwo}
-							src={heroLineTwo}
+							src={heroMobileDoItBetter}
 						/>
-						<Image
-							alt='country_girls'
-							className={styles.heroLineThree}
-							src={heroLineThree}
-						/>
+						<div className={styles.heroLineThree}>
+							<span className='animate-pulse'>
+								<Link
+									className={styles.heroAvailableNow}
+									target='_blank'
+									href='https://music.apple.com/us/artist/erin-stoll/1131483440'>
+									AVAILABLE NOW
+								</Link>
+							</span>
+						</div>
 					</div>
-					{/* TODO: FIX OR DELETE */}
-					{/* <div className={styles.gradientContainer}>
-						this is the gradient container
-					</div> */}
 				</div>
 			</div>
 		</section>

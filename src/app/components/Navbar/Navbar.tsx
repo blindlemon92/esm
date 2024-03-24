@@ -3,6 +3,8 @@
 import siteLogo from '/public/nameLogo.png';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import AmazonLogo from '../svgs/AmazonLogo/AmazonLogo';
@@ -23,7 +25,8 @@ const hammersmith = Hammersmith_One({ weight: '400', subsets: ['latin'] });
 
 export default function Navbar() {
 	const [dropdownOpen, setDropdownOpen] = useState(false);
-
+	const [hideBurger, setHideBurger] = useState(false);
+	const pathName = usePathname();
 	const [isScrolled, setIsScrolled] = useState(false);
 	const nodeRef = useRef(null);
 	const handleDropdown = async () => {
@@ -45,8 +48,8 @@ export default function Navbar() {
 	}, []);
 
 	useEffect(() => {
-		console.log(isScrolled);
-	}, [isScrolled]);
+		pathName === '/contact-me' ? setHideBurger(() => true) : null;
+	}, [pathName]);
 
 	return (
 		<>
@@ -59,12 +62,14 @@ export default function Navbar() {
 					}`}>
 					<div className={styles.logos}>
 						<div className={styles.erinLogoContainer}>
-							<Image
-								className={styles.erinLogo}
-								src={siteLogo}
-								alt='Erin_Stoll'
-								priority={true}
-							/>
+							<Link href='/'>
+								<Image
+									className={styles.erinLogo}
+									src={siteLogo}
+									alt='Erin_Stoll'
+									priority={true}
+								/>
+							</Link>
 						</div>
 						<div className={styles.socialLogos}>
 							<Link
@@ -105,7 +110,7 @@ export default function Navbar() {
 							</Link>
 						</div>
 						<button onClick={() => handleDropdown()} className={styles.burger}>
-							{dropdownOpen ? <></> : <BurgerLogo />}
+							{dropdownOpen || hideBurger ? <></> : <BurgerLogo />}
 						</button>
 					</div>
 					<div className={styles.linksContainer}>

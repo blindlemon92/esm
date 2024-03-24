@@ -1,4 +1,6 @@
 'use client';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import {
 	TextInput,
@@ -33,9 +35,13 @@ export function Contact() {
 		},
 	});
 
-	const [userMessage, setUserMessage] = useState();
 	const formRef = useRef<any>();
 	const router = useRouter();
+
+	const showToast = async () => {
+		toast.success('Your message sent: thanks for reaching out!');
+	};
+
 	const handleSubmit = async (e: MessageT) => {
 		try {
 			emailjs
@@ -45,6 +51,7 @@ export function Contact() {
 				.then(
 					(res) => {
 						if (res) {
+							showToast();
 							router.push('/');
 						}
 					},
